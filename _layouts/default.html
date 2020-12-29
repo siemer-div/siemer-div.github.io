@@ -2,11 +2,15 @@
 <html>
     {% include head.html %}
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <header>
     {% include nav.html %}
-    {% include header.html %}
+    </header>
+    <main>
+    {% include intro.html %}
     {% include about.html %}
-    {% include vision.html %}
     {% include references.html %}
+    </main>
+    {% include footer.html %}
     {% include js.html %}
     </body>
 </html>

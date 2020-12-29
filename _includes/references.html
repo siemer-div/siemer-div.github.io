@@ -1,25 +1,34 @@
-    <!-- References Section -->
-    <section id="references" class="container content-section text-center">
-        <div class="row">
-            <h2>Referenties</h2>
-            {% for reference in site.data.references %}
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="card">
-                        <figure>
-                    {% for picture in reference.pictures %}
-                        <img class="img-fluid" src="img/{{ picture }}">
-                    {% endfor %}
-                    <figcaption>{{ reference.caption }}</figcaption>
-                    </figure>
-                    <div class="card-header">{{ reference.category }}</div>
-                        <div class="card-body">
-                            <h5 class="card-title">{{ reference.title }}</h5>
-                            <p class="card-text">{{ reference.location }}</p>
-                            <p class="card-text">{{ reference.budget }}</p>
-                            <p class="card-text">{{ reference.description }}</p>
-                        </div>
-                    </div>                   
-                </div>
-            {% endfor %}
+<!-- References Section -->
+<section id="referenties" class="album py-5">
+  <div class="container">
+    <h2>Referenties</h2>
+    <div class="row g-5">
+      {% for reference in site.data.references %}
+      <div class="col-md-12 col-lg-6 ms-auto">
+            <h3 class="fs-5 text-muted">{{ reference.title }}</h3>
+            <div class="row">
+              <div class="col">
+                {% for description in reference.description %}
+                <p class="card-text">{{ description }}</p>
+                {% endfor %}
+                <p class="text-muted">
+                  Budget: {{ reference.budget }}
+                </p>
+                <p class="text-muted">
+                  Locatie: {{ reference.location }}
+                </p>
+                <span class="badge rounded-pill bg-secondary ">{{ reference.category }}</span>
+              </div>
+              {% if reference.pictures %}
+              <div class="col-4">
+                {% for picture in reference.pictures %}
+                <img class="img-fluid" src="img/{{ picture }}" />
+                {% endfor %}
+              </div>
+              {% endif %}
         </div>
-    </section>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
