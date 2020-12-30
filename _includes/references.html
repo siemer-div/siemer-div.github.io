@@ -1,0 +1,35 @@
+<!-- References Section -->
+<section id="referenties" class="bg-light py-5">
+  <div class="container">
+    <h2>Referenties</h2>
+    <div class="row pt-3 g-3">
+      {% for reference in site.data.references %}
+      <div class="col-xs-12">
+        <div
+          class="row m-1 border h-100 bg-white rounded overflow-hidden flex-md-row shadow-sm"
+        >
+          <div class="col m-3 d-flex flex-column">
+            <strong class="d-inline-block mb-2 text-primary"
+              >{{ reference.category }}</strong
+            >
+            <h3>{{ reference.title }}</h3>
+            <div class="mb-1 text-muted">Budget: €{{ reference.budget }}</div>
+            <div class="mb-1 text-muted">Situering: {{ reference.location }}</div>
+
+            {% for description in reference.description %}
+            <p class="card-text">{{ description }}</p>
+            {% endfor %}
+          </div>
+          {% if reference.pictures %}
+          <div class="col d-flex flex-wrap m-2 align-items-center">
+            {% for picture in reference.pictures %}
+            <img class="rounded img-fluid" src="img/{{ picture }}" />
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
