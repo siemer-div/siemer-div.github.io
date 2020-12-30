@@ -1,4 +1,38 @@
 .img-max {
-    max-width: 500px;
-    width:100%;style="background-color:#f13 !important;"
-  }
+  max-width: 500px;
+  width: 100%;
+}
+
+.card-img-right {
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+}
+
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+  .h-md-250 { height: 250px; }
+}
+
+.bg-black {
+  background-color: #000000 !important;
+}
+
+#intro {
+  height: 65vh;
+}
+
+#particles-js {
+  top: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+}
+
+#overlay {
+  position: relative;
+}
+
+canvas {
+  width: 100% !important;
+  height: 65vh !important;
+}
