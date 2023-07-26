@@ -10,6 +10,5 @@ _site/
 .bundle/
 vendor/
 
-.jekyll-cache/
-.DS_Store
+.jekyll-cache/*
 .DS_Store
