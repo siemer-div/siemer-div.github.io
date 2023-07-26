@@ -11,3 +11,19 @@ View this jekyll theme in action [here](https://jeromelachaud.github.io/grayscal
 
 =========
 For more details, read the [documentation](http://jekyllrb.com/)
+
+
+## Instation
+
+- Ruby
+
+To install
+```
+gem install bundler jekyll
+bundle install webrick
+```
+
+To develop
+```
+bundle exec jekyll serve --livereload
+```
